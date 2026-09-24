@@ -21,7 +21,11 @@ Only the fuse, buck and opto inputs connect to the 18-pin header's 12 V pins.
 
 ## Block diagram
 
-Visual version (FigJam): [TNT135 18-pin to ESP32-P4 wiring](https://www.figma.com/board/ngvpqFNMf41GJRG7fQoVx4)
+![18-pin connector to ESP32-P4 wiring](wiring-diagram.png)
+
+Red = 12 V, orange = 5 V, green = 3.3 V. Source (editable) in FigJam:
+[TNT135 18-pin to ESP32-P4 wiring](https://www.figma.com/board/ngvpqFNMf41GJRG7fQoVx4).
+Re-export `wiring-diagram.png` after editing it.
 
 ```
  18-pin dash connector (bike harness)
