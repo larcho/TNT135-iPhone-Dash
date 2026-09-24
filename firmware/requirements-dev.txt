@@ -1,0 +1,5 @@
+# Host-side tooling (install into a venv: make venv)
+mpremote>=1.26
+esptool>=5.0
+pytest>=8.0
+ruff>=0.6

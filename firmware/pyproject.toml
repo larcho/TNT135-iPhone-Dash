@@ -1,0 +1,17 @@
+[project]
+name = "tnt135-firmware"
+version = "0.1.0"
+description = "MicroPython sensor bridge for the Benelli TNT135 iPhone dash"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# MicroPython-only modules (machine, bluetooth, aioble) don't exist on CPython.
+ignore = ["UP"]

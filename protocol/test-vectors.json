@@ -1,0 +1,62 @@
+{
+  "protocol_version": 1,
+  "format": "<BBHHHHBBI (little-endian, 16 bytes)",
+  "cases": [
+    {
+      "name": "idle_neutral",
+      "fields": {
+        "version": 1,
+        "seq": 0,
+        "tach_hz_x10": 233,
+        "speed_hz_x10": 0,
+        "fuel_mv": 1650,
+        "vbat_mv": 13800,
+        "flags": 1,
+        "speed_pulses": 0
+      },
+      "hex": "0100e90000007206e835010000000000"
+    },
+    {
+      "name": "riding_left_indicator",
+      "fields": {
+        "version": 1,
+        "seq": 42,
+        "tach_hz_x10": 1250,
+        "speed_hz_x10": 1875,
+        "fuel_mv": 980,
+        "vbat_mv": 14250,
+        "flags": 2,
+        "speed_pulses": 123456
+      },
+      "hex": "012ae2045307d403aa37020040e20100"
+    },
+    {
+      "name": "all_flags_max_values",
+      "fields": {
+        "version": 1,
+        "seq": 255,
+        "tach_hz_x10": 65535,
+        "speed_hz_x10": 65535,
+        "fuel_mv": 3300,
+        "vbat_mv": 65535,
+        "flags": 63,
+        "speed_pulses": 4294967295
+      },
+      "hex": "01ffffffffffe40cffff3f00ffffffff"
+    },
+    {
+      "name": "engine_off",
+      "fields": {
+        "version": 1,
+        "seq": 7,
+        "tach_hz_x10": 0,
+        "speed_hz_x10": 0,
+        "fuel_mv": 0,
+        "vbat_mv": 12400,
+        "flags": 32,
+        "speed_pulses": 9
+      },
+      "hex": "01070000000000007030200009000000"
+    }
+  ]
+}

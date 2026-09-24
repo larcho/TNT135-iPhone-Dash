@@ -1,0 +1,46 @@
+# XcodeGen spec — the .xcodeproj is generated, never committed. Run `make project`.
+name: TNT135Dash
+options:
+  bundleIdPrefix: com.larcho
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+configFiles:
+  Debug: Config/Base.xcconfig
+  Release: Config/Base.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+packages:
+  DashCore:
+    path: Packages/DashCore
+targets:
+  TNT135Dash:
+    type: application
+    platform: iOS
+    sources: [TNT135Dash]
+    dependencies:
+      - package: DashCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.larcho.tnt135dash
+        TARGETED_DEVICE_FAMILY: "1"
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: TNT135
+        INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription: "Connects to the TNT135 sensor bridge on your motorcycle to show speed, RPM, fuel and gear."
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "GPS speed is used to calibrate the speedometer."
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UIStatusBarHidden: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    info:
+      path: TNT135Dash/Info.plist
+      properties:
+        UIBackgroundModes: [bluetooth-central]
+    scheme:
+      testTargets: []
+      gatherCoverageData: false

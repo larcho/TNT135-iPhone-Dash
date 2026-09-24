@@ -1,0 +1,4 @@
+// Shared build settings. Personal signing lives in Local.xcconfig (gitignored):
+//   cp Config/Local.xcconfig.example Config/Local.xcconfig
+CODE_SIGN_STYLE = Automatic
+#include? "Local.xcconfig"
